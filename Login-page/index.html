@@ -1,102 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" rel="stylesheet">
-    <style>
-        .dark-mode {
-            --bg-color: #1a202c;
-            --text-color: #a0aec0;
-            --input-bg: #2d3748;
-            --input-border: #4a5568;
-            --button-bg-hover: #2c5282;
-        }
-        .light-mode {
-            --bg-color: #f7fafc;
-            --text-color: #2d3748;
-            --input-bg: #edf2f7;
-            --input-border: #cbd5e0;
-            --button-bg-hover: #2b6cb0;
-        }
-        .theme {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-        .theme input {
-            background-color: var(--input-bg);
-            border-color: var(--input-border);
-        }
-        .theme button {
-            background-color: var(--button-bg);
-        }
-        .theme button:hover {
-            background-color: var(--button-bg-hover);
-        }
-    </style>
+    <title>Create Account</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
 </head>
-<body class="theme dark-mode flex items-center justify-center min-h-screen">
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg w-full">
-        <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold text-white">Welcome back</h1>
-            <button id="toggleTheme" class="bg-gray-700 text-white py-1 px-3 rounded flex items-center">
-                <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/1164/1164954.png" alt="Sun" class="h-5 w-5">
-            </button>
+
+<body class="bg-gray-900 text-white">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="hidden lg:block mr-12">
+            <!-- Illustration or additional content -->
+            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/illustration.svg" alt="Illustration" class="w-104">
         </div>
-        <div class="flex justify-between mb-6">
-            <button class="w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded mr-2 border border-gray-700 flex items-center hover:text-white hover:bg-gray-700">
-                <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="h-5 w-5 mr-2" alt="Google"> Log in with Google
-            </button>
-            <button class="w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded ml-2 border border-gray-700 flex items-center hover:text-white hover:bg-gray-700">
-                <img src="./img/3d-logo-of-apple-iphone-free-png.webp" class="h-5 w-5 mr-2" alt="Apple"> Log in with Apple
-            </button>
-        </div>
-        <div class="flex items-center mb-4">
-            <hr class="flex-grow border-gray-600">
-            <span class="text-gray-400 mx-4">or</span>
-            <hr class="flex-grow border-gray-600">
-        </div>
-        <form>
-            <div class="mb-3">
-                <label class="block text-white mb-1" for="email">Email</label>
-                <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:border-blue-500 font-bold" placeholder="Enter your email">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md mr-24">
+            <div class="mb-4 text-left font-bold">
+                <h2 class="text-xl">Create your Free Account</h2>
             </div>
-            <div class="mb-3">
-                <label class="block text-white mb-1" for="password">Password</label>
-                <input type="password" id="password" class="w-full px-4 py-2 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:border-blue-500 font-bold" placeholder="••••••••">
+            <div class="flex justify-between mb-6">
+                <button class="w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded mr-2 border border-gray-700 flex items-center hover:text-white hover:bg-gray-700">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="h-5 w-5 mr-2" alt="Google"> Sign up with Google
+                </button>
+                <button class="w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded ml-2 border border-gray-700 flex items-center hover:text-white hover:bg-gray-700">
+                    <img src="./img/3d-logo-of-apple-iphone-free-png.webp" class="h-5 w-5 mr-2" alt="Apple"> Sign up with Apple
+                </button>
             </div>
-            <div class="flex items-center justify-between mb-4">
-                <label class="flex items-center text-gray-400">
-                    <input type="checkbox" class=" bg-gray-700 rounded form-checkbox text-blue-500 mr-2">
-                    Remember me
-                </label>
-                <a href="#" class="text-blue-500 hover:underline text-sm">Forgot password?</a>
+            <div class="flex items-center mb-4">
+                <hr class="flex-grow border-gray-600">
+                <span class="text-gray-400 mx-4">or</span>
+                <hr class="flex-grow border-gray-600">
             </div>
-            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">Sign in to your account</button>
-        </form>
-        <div class="text-gray-400 mt-4 text-center">
-            Don't have an account yet? <a href="#" class="text-blue-500 hover:underline">Sign up here</a>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-300" for="email">Your email</label>
+                    <input type="email" id="email" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="name@company.com">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300" for="password">Password</label>
+                    <input type="password" id="password" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="••••••••">
+                </div>
+                <div class="mb-4 flex items-center">
+                    <input type="checkbox" id="terms" class="mr-2">
+                    <label for="terms" class="text-gray-400 text-sm">By signing up, you are creating a Flowbite account, and you agree to Flowbite's <a href="#" class="text-blue-400">Terms of Use</a> and <a href="#" class="text-blue-400">Privacy Policy</a>.</label>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="w-full p-2 bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-700 focus:outline-none">Create an account</button>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm">Already have an account? <a href="#" class="text-blue-400">Sign in here</a></p>
+                </div>
+            </form>
         </div>
     </div>
-    <script>
-        document.getElementById('toggleTheme').addEventListener('click', function() {
-            var body = document.body;
-            var themeIcon = document.getElementById('themeIcon');
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                themeIcon.src = './img/moon-removebg-preview.png';
-                themeIcon.alt = 'Moon';
-            } else {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                themeIcon.src = './img/sun-removebg-preview.png';
-                themeIcon.alt = 'Sun';
-            }
-        });
-    </script>
-    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
 </body>
 </html>
