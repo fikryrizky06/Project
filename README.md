@@ -1,1 +1,19 @@
-Create Account
+Register Form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
