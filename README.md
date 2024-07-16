@@ -1,1 +1,18 @@
-Register Account
+Register Form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
