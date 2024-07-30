@@ -6,6 +6,7 @@ module.exports = {
     "./index.html",
     "./Login.html",
     "./Dashboard.html",
+    "./HomePage.html",
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
