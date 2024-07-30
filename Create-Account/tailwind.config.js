@@ -4,6 +4,8 @@ module.exports = {
   content: [
     "./src/**/*.{html,js}",
     "./index.html",
+    "./Login.html",
+    "./Dashboard.html",
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {

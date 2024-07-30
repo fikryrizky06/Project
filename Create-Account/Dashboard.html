@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vessel Monitoring Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/flowbite@1.4.3/dist/flowbite.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Header and Navigation -->
+<div class="bg-blue-500 p-4">
+  <div class="container mx-auto">
+    <!-- Logo and User Profile -->
+    <div class="flex justify-between items-center mb-2">
+      <div class="flex items-center">
+        <span class=" ml-5 text-white font-bold  ">Dashboard</span>
+      </div>
+      <div class="relative mr-3">
+        <button id="userMenuButton" class="flex items-center space-x-2 focus:outline-none">
+          <span class="text-white">User</span>
+          <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center">U</div>
+        </button>
+        <!-- Dropdown Menu -->
+        <div id="userMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+          <a href="login.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+    <div class="bg-blue-200 p-4">
+    <!-- Navigation Links -->
+    <nav class="flex ml-5 space-x-20 text-black text-lg">
+      <a href="#" class="hover:text-gray-500">Dashboard</a>
+      <a href="#" class="hover:text-gray-500">Tracking</a>
+      <a href="#" class="hover:text-gray-500">CCTV</a>
+      <a href="#" class="hover:text-gray-500">Internet</a>
+      <a href="#" class="hover:text-gray-500">Report</a>
+      <a href="#" class="hover:text-gray-500">Setting</a>
+    </nav>
+    </div>
+
+
+<!-- Main Content -->
+<div class="container mx-auto mt-8 flex space-x-4 px-4">
+  <!-- Add your content here -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.3/dist/flowbite.min.js"></script>
+<script>
+  document.getElementById('userMenuButton').addEventListener('click', function() {
+    document.getElementById('userMenu').classList.toggle('hidden');
+  });
+  window.addEventListener('click', function(e) {
+    if (!document.getElementById('userMenuButton').contains(e.target)) {
+      document.getElementById('userMenu').classList.add('hidden');
+    }
+  });
+</script>
+</body>
+</html>
