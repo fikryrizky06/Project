@@ -6,8 +6,11 @@
     <title>Petkart</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body, html {
+            font-family: 'Roboto', sans-serif;
+            color: #191918 ;
             scroll-behavior: smooth;
             margin: 0;
             padding: 0;
@@ -36,7 +39,7 @@
             left: 5%;
             transform: translateY(-50%);
             text-align: left;
-            color: white;
+            color: #191918 ;
             z-index: 10;
         }
         header {
@@ -81,7 +84,7 @@
             content: '\25BC';
             margin-left: 8px;
             font-size: 0.75em;
-            color: white;
+            color: black;
             transition: transform 0.3s ease-in-out;
         }
         .nav-item-with-arrow.active::after {
@@ -149,25 +152,25 @@
 </head>
 <body class="bg-blue-50">
 
-    <section id="utama">
+    <section id="utama" class="utamaa">
     <!-- Header Section -->
-    <header class="absolute top-0 left-0 w-full bg-opacity-50 shadow-md z-10">
+    <header class="absolute top-0 left-0 w-full bg-opacity-50 z-10">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <div class="text-2xl font-bold text-white font-serif">Petkart</div>
+            <div class="text-2xl font-bold ">Petkart</div>
             <nav class="space-x-6 relative">
-                <a href="#" class="text-white font-bold font-serif">Home</a>
+                <a href="#" class=" font-bold">Home</a>
                 <div class="relative inline-block">
-                    <a href="#" id="shop-link" class="text-white font-bold nav-item-with-arrow font-serif">Shop</a>
-                    <div id="shop-dropdown" class="dropdown font-serif rounded">
+                    <a href="#" id="shop-link" class=" font-bold nav-item-with-arrow">Shop</a>
+                    <div id="shop-dropdown" class="dropdown rounded">
                         <a href="#">Category 1</a>
                         <a href="#">Category 2</a>
                         <a href="#">Category 3</a>
                     </div>
                 </div>
-                <a href="#" class="text-white font-bold font-serif">Product</a>
-                <a href="#" class="text-white font-bold font-serif">Pages</a>
-                <a href="#" class="text-white font-bold font-serif">About</a>
-                <a href="#" class="text-white font-bold font-serif">Contact</a>
+                <a href="#" class="font-bold">Product</a>
+                <a href="#" class="font-bold">Pages</a>
+                <a href="#" class="font-bold">About</a>
+                <a href="#" class="font-bold">Contact</a>
             </nav>
             <div class="space-x-4">
                 <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
@@ -181,18 +184,18 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="https://images6.alphacoders.com/133/1338174.png" alt="Cat 1">
+                <img src="https://i.pinimg.com/564x/7f/56/d3/7f56d330b02cf22633d6968a19b15fd8.jpg" alt="Cat 1">
                 <div class="content">
-                    <h1 class="text-4xl font-bold">Welcome To 20% Offer</h1>
-                    <p class="mt-4 text-xl">BEST OFFER</p>
+                    <h1 class="text-4xl font-bold ">Welcome To 20% Offer</h1>
+                    <p class="mt-4 text-xl font-bold">BEST OFFER</p>
                     <a href="#" class="mt-6 inline-block px-8 py-4 bg-red-600 text-white font-bold rounded-md shadow-lg hover:bg-red-700">SHOP NOW</a>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="https://images5.alphacoders.com/134/thumbbig-1341511.webp" alt="Cat 2">
+                <img src="https://i.pinimg.com/564x/e1/60/1d/e1601d4a1fb7ed5bb2ececca5717913a.jpg" alt="Cat 2">
                 <div class="content">
-                    <h1 class="text-4xl font-bold">Welcome To 20% Offer</h1>
-                    <p class="mt-4 text-xl">BEST OFFER</p>
+                    <h1 class="text-4xl font-bold ">20% off offer available</h1>
+                    <p class="mt-4 text-xl font-bold">50% OFFER</p>
                     <a href="#" class="mt-6 inline-block px-8 py-4 bg-red-600 text-white font-bold rounded-md shadow-lg hover:bg-red-700">SHOP NOW</a>
                 </div>
             </div>
