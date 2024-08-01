@@ -1,119 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class', // Enable dark mode
-        };
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
-</head>
-
-<body class="bg-gray-900 text-white dark:bg-gray-100 dark:text-black transition-colors duration-300">
-    <div class="flex flex-col lg:flex-row items-center justify-center min-h-screen px-4">
-        <div class="mb-8 lg:mb-0 lg:mr-12">
-            <!-- Illustration or additional content -->
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/illustration.svg" alt="Illustration" class="w-full lg:w-auto max-w-md lg:max-w-none">
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg dark:bg-white dark:shadow-lg">
-            <div class="flex justify-between items-center mb-4 text-left font-bold">
-                <h2 class="text-xl dark:text-black">Create your Free Account</h2>
-                <button id="theme-toggle" class="p-2 rounded focus:outline-none" aria-label="Toggle theme">
-                    <img src="./img/moon.png" id="theme-toggle-dark-icon" class="w-6 h-6 hidden">
-                    <img src="./img/sun.png" id="theme-toggle-light-icon" class="w-6 h-6 hidden">
-                </button>
-            </div>
-            <div class="flex flex-col lg:flex-row justify-between mb-6">
-                <button class="w-full lg:w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded mb-2 lg:mb-0 lg:mr-2 border border-gray-700 flex items-center justify-center hover:text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200" aria-label="Sign up with Google">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="h-5 w-5 mr-2" alt="Google"> Sign up with Google
-                </button>
-                <button class="w-full lg:w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded lg:ml-2 border border-gray-700 flex items-center justify-center hover:text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 font-bol" aria-label="Sign up with Apple">
-                    <img src="img/Apple_logo_black.svg" class="h-5 w-4.9 mr-2 hidden dark:block" id="apple-dark-logo" alt="Apple">
-                    <img src="img/Apple-white.webp" class="h-5 w-5 mr-2 dark:hidden" id="apple-light-logo" alt="Apple"> Sign up with Apple
-                </button>
-            </div>
-            <div class="flex items-center mb-4">
-                <hr class="flex-grow border-gray-600 dark:border-gray-300">
-                <span class="text-gray-400 mx-4 dark:text-gray-600">or</span>
-                <hr class="flex-grow border-gray-600 dark:border-gray-300">
-            </div>
-            <form>
-                <div class="mb-4">
-                    <label class="block text-gray-300 dark:text-black" for="email">Your email</label>
-                    <input type="email" id="email" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50" placeholder="name@company.com">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-300 dark:text-black" for="country">Choose Country</label>
-                    <select id="country" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50">
-                        <option value="">Select your country</option>
-                        <option value="fr">United States</option>
-                        <option value="de">Canada</option>
-                        <option value="es">France</option>
-                        <option value="gr">Germany</option>
-                        <!-- Add more countries as needed -->
-                    </select>
-                </div>m
-                <div class="mb-4">
-                    <label class="block text-gray-300 dark:text-black" for="password">Password</label>
-                    <input type="password" id="password" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50" placeholder="••••••••">
-                </div>
-                <div class="mb-4 flex items-center">
-                    <input type="checkbox" id="terms" class="mr-2 rwounded dark:bg-gray-100 dark:border-gray-300">
-                    <label for="terms" class="text-gray-400 text-sm dark:text-gray-600">By signing up, you are creating a Flowbite account, and you agree to Flowbite's <a href="#" class="text-blue-400">Terms of Use</a> and <a href="#" class="text-blue-400">Privacy Policy</a>.</label>
-                </div>
-                <div class="mb-4">
-                    <button type="submit" class="w-full p-2 bg-blue-500 rounded hover:bg-blue-800 focus:bg-blue-700 focus:outline-none text-white font-bold">Create an account</button>
-                </div>
-                <div class="text-center">
-                    <p class="text-gray-400 text-sm dark:text-gray-600">Already have an account? <a href="Login.html" class="text-blue-400">Sign in here</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
-        const appleDarkLogo = document.getElementById('apple-dark-logo');
-        const appleLightLogo = document.getElementById('apple-light-logo');
-
-        // Check the local storage for the theme
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-            darkIcon.classList.remove('hidden');
-            appleDarkLogo.classList.remove('hidden');
-            appleLightLogo.classList.add('hidden');
-        } else {
-            lightIcon.classList.remove('hidden');
-            appleDarkLogo.classList.add('hidden');
-            appleLightLogo.classList.remove('hidden');
+    <title>All About Cats</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hover-bounce:hover {
+            animation: bounce 1s;
+        }
+        .custom-shape {
+            clip-path: ellipse(70% 70% at 50% 50%);
+        }
+        body {
+            background-color: #F8F5F2; /* Beige background color */
+        }
+        * {
+            scroll-behavior: smooth;
+        }
+        .nav-item {
+            font-family: 'Georgia', serif;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+        .nav-item:hover {
+            background-color: #e2e8f0;
+        }
+        .nav-container {
+            border-bottom: 1px solid #d1d5db; /* Gray border for the bottom */
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            border-radius: 0 0 1rem 1rem;
+            z-index: 1000;
+        }
+        .main-title {
+            font-size: 3rem; /* Larger font size for title */
+        }
+        .main-button {
+            font-size: 1.25rem; /* Larger font size for button */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        .main-button:hover {
+            background-color: #4299e1;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .care-tips-section {
+            background-color: #f8f5f2;
+            padding: 3rem 0; /* Increased padding */
+            margin-top: 3rem; /* Increased margin top */
+            text-align: center;
+        }
+        .care-tips-title {
+            font-size: 2.5rem;
+            color: #4a4e69;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .care-tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem; /* Increased gap */
+            margin-bottom: 2rem; /* Added margin bottom */
+        }
+        .care-tip {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            max-width: 200px;
+            margin: 1rem; /* Added margin */
+            padding: 1.5rem; /* Increased padding */
+        }
+        .care-tip img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem; /* Space between text and image */
+        }
+        .care-tip h3 {
+            font-size: 1.25rem;
+            color: #1f2937; /* Dark gray color */
+            margin-bottom: 0.5rem; /* Added margin bottom */
+        }
+        /* Our Cats Section */
+        .our-cats-section {
+            padding: 3rem 0; /* Increased padding */
+            text-align: center;
+            margin-top: 3rem; /* Increased margin top */
+        }
+        .our-cats-title {
+            font-size: 2.5rem;
+            color: #4a4e69;
+            font-family: 'Georgia', serif;
+            margin-bottom: 2rem;
+        }
+        .cats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem; /* Increased gap */
+            margin-bottom: 2rem; /* Added margin bottom */
+        }
+        .cat {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            width: 200px; /* Set a fixed width */
+            margin: 1rem; /* Added margin */
+            padding: 1.5rem; /* Increased padding */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for better visual */
+            border-radius: 0.5rem; /* Rounded corners */
+            background-color: #fff; /* Background color for better contrast */
+            display: flex; /* Added for Flexbox */
+            flex-direction: column; /* Align children vertically */
+            justify-content: space-between; /* Space between children */
+        }
+        .cat img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .cat img:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .cat-title {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+        .cat-button {
+            font-size: 1rem;
+            color: #4a4e69;
+            border: 1px solid #4a4e69;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        .cat-button:hover {
+            background-color: #e2e8f0;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        /* About Us Section */
+        .about-us-section {
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .about-us-title {
+            font-size: 2.5rem;
+            color: #4a4e69;
+            font-family: 'Georgia', serif;
+            margin-bottom: 2rem;
+        }
+        .about-us-content {
+            font-size: 1.25rem;
+            color: #1f2937; /* Dark gray color */
+            font-family: 'calibri';
+            font: bold;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section.blogs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 3rem;
+        }
+        .blog {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .blog img {
+            border-radius: 50%;
+            width: 200px; /* Increased width */
+            height: 200px; /* Increased height */
+            object-fit: cover;
+            border: 5px solid #fff;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .blog img:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        .blog p {
+            font-size: 2rem; /* Increased font size */
+            color: black;
+            font-family: 'Georgia', serif;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen pt-16"> <!-- Adding padding top to avoid overlap with fixed navbar -->
 
-        themeToggleBtn.addEventListener('click', function() {
-            // Toggle the theme
-            document.documentElement.classList.toggle('dark');
+    <!-- Navigation Bar -->
+    <nav class="bg-white py-3 nav-container">
+        <div class="container mx-auto flex justify-center space-x-10">
+            <a href="#" class="text-gray-800 nav-item">Home</a>
+            <a href="#care" class="text-gray-800 nav-item">Care</a>
+            <a href="#our-cats" class="text-gray-800 nav-item">Cats</a>
+            <a href="#about-us" class="text-gray-800 nav-item">About us</a>
+            <a href="#blog" class="text-gray-800 nav-item">Blogs</a>
+        </div>
+    </nav>
 
-            // Update the local storage
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-                darkIcon.classList.remove('hidden');
-                lightIcon.classList.add('hidden');
-                appleDarkLogo.classList.remove('hidden');
-                appleLightLogo.classList.add('hidden');
-            } else {
-                localStorage.setItem('theme', 'light');
-                darkIcon.classList.add('hidden');
-                lightIcon.classList.remove('hidden');
-                appleDarkLogo.classList.add('hidden');
-                appleLightLogo.classList.remove('hidden');
-            }
-        });
-    </script>
+    <!-- Main Section -->
+    <main class="flex-1 flex items-center justify-center fade-in">
+        <div class="container mx-auto flex items-center">
+            <!-- Left Section -->
+            <div class="flex flex-col items-start">
+                <h1 class="text-4xl font-serif mb-6 main-title">All about cats!</h1>
+                <button class="bg-blue-500 text-white py-2 px-6 rounded-lg font-serif main-button">Start reading</button>
+            </div>
+            <!-- Right Section -->
+            <div class="relative flex items-center ml-auto">
+                <div class="custom-shape p-6 flex items-center justify-center">
+                    <img src="./img/cat-rmvbg.png" alt="Cat" class="w-49 h-auto hover-bounce">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <!-- Care Tips Section -->
+    <section id="care" class="care-tips-section fade-in">
+        <h2 class="care-tips-title">CARE TIPS</h2>
+        <div class="care-tips-container">
+            <div class="care-tip">
+                <h3>1. Keep kittens warm.</h3>
+                <img src="./img/1.png" alt="Keep kittens warm" class="hover-bounce">
+            </div>
+            <div class="care-tip">
+                <h3>2. Provide kittens with adequate hydration and nutrition.</h3>
+                <img src="./img/2.png" alt="Adequate hydration and nutrition" class="hover-bounce">
+            </div>
+        </div>
+        <div class="care-tips-container">
+            <div class="care-tip">
+                <h3>3. Keep kittens clean.</h3>
+                <img src="./img/3.png" alt="Keep kittens clean" class="hover-bounce">
+            </div>
+            <div class="care-tip">
+                <h3>4. Provide socialization.</h3>
+                <img src="./img/4.png" alt="Provide socialization" class="hover-bounce">
+            </div>
+            <div class="care-tip">
+                <h3>5. Protect from disease.</h3>
+                <img src="./img/5.png" alt="Protect from disease" class="hover-bounce">
+            </div>
+        </div>
+    </section>
+    <!-- Our Cats Section -->
+    <section id="our-cats" class="our-cats-section fade-in">
+        <h2 class="our-cats-title">OUR CATS</h2>
+        <div class="cats-container">
+            <div class="cat">
+                <img src="img/kcng.jpg" alt="Cat 1" class="hover-bounce">
+                <h3 class="cat-title">Cat 1</h3>
+                <a href="#" class="cat-button">Read More</a>
+            </div>
+            <div class="cat">
+                <img src="./img/cat2.jpg" alt="Cat 2" class="hover-bounce">
+                <h3 class="cat-title">Cat 2</h3>
+                <a href="#" class="cat-button">Read More</a>
+            </div>
+            <div class="cat">
+                <img src="./img/cat3.jpg" alt="Cat 3" class="hover-bounce">
+                <h3 class="cat-title">Cat 3</h3>
+                <a href="#" class="cat-button">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us-section fade-in">
+        <h2 class="about-us-title">ABOUT US</h2>
+        <div class="about-us-content">
+            <p>The cat, commonly referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Recent advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.</p>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>  
+    <br>  
+    <br>  
+    <section id="blog" class="blogs fade-in">
+            <div class="blog">
+                <img src="img/cat1.jpg" alt="Blog 1" class="hover-bounce">
+                <p>Blog 1</p>
+            </div>
+            <div class="blog">
+                <img src="img/cat2.jpg" alt="Blog 2" class="hover-bounce">
+                <p>Blog 2</p>
+            </div>
+            <div class="blog">
+                <img src="img/cat3.jpg" alt="Blog 3" class="hover-bounce">
+                <p>Blog 3</p>
+            </div>
+            <div class="blog">
+                <img src="img/kcng.jpg" alt="Blog 4" class="hover-bounce">
+                <p>Blog 4</p>
+            </div>
+        </section>
 </body>
 </html>

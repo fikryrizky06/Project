@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white dark:bg-gray-100 dark:text-black transition-colors duration-300">
+    <div class="flex flex-col lg:flex-row items-center justify-center min-h-screen px-4">
+        <div class="mb-8 lg:mb-0 lg:mr-12">
+            <!-- Illustration or additional content -->
+            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/illustration.svg" alt="Illustration" class="w-full lg:w-auto max-w-md lg:max-w-none">
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg dark:bg-white dark:shadow-lg">
+            <div class="flex justify-between items-center mb-4 text-left font-bold">
+                <h2 class="text-xl dark:text-black">Create your Free Account</h2>
+                <button id="theme-toggle" class="p-2 rounded focus:outline-none" aria-label="Toggle theme">
+                    <img src="./img/moon.png" id="theme-toggle-dark-icon" class="w-6 h-6 hidden">
+                    <img src="./img/sun.png" id="theme-toggle-light-icon" class="w-6 h-6 hidden">
+                </button>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between mb-6">
+                <button class="w-full lg:w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded mb-2 lg:mb-0 lg:mr-2 border border-gray-700 flex items-center justify-center hover:text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200" aria-label="Sign up with Google">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="h-5 w-5 mr-2" alt="Google"> Sign up with Google
+                </button>
+                <button class="w-full lg:w-1/2 bg-gray-800 text-gray-400 py-2 px-6 rounded lg:ml-2 border border-gray-700 flex items-center justify-center hover:text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 font-bol" aria-label="Sign up with Apple">
+                    <img src="img/Apple_logo_black.svg" class="h-5 w-4.9 mr-2 hidden dark:block" id="apple-dark-logo" alt="Apple">
+                    <img src="img/Apple-white.webp" class="h-5 w-5 mr-2 dark:hidden" id="apple-light-logo" alt="Apple"> Sign up with Apple
+                </button>
+            </div>
+            <div class="flex items-center mb-4">
+                <hr class="flex-grow border-gray-600 dark:border-gray-300">
+                <span class="text-gray-400 mx-4 dark:text-gray-600">or</span>
+                <hr class="flex-grow border-gray-600 dark:border-gray-300">
+            </div>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-300 dark:text-black" for="email">Your email</label>
+                    <input type="email" id="email" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50" placeholder="name@company.com">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 dark:text-black" for="country">Choose Country</label>
+                    <select id="country" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50">
+                        <option value="">Select your country</option>
+                        <option value="fr">United States</option>
+                        <option value="de">Canada</option>
+                        <option value="es">France</option>
+                        <option value="gr">Germany</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>m
+                <div class="mb-4">
+                    <label class="block text-gray-300 dark:text-black" for="password">Password</label>
+                    <input type="password" id="password" class="w-full p-2 mt-2 bg-gray-700 rounded border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 dark:bg-gray-100 dark:border-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-opacity-50" placeholder="••••••••">
+                </div>
+                <div class="mb-4 flex items-center">
+                    <input type="checkbox" id="terms" class="mr-2 rwounded dark:bg-gray-100 dark:border-gray-300">
+                    <label for="terms" class="text-gray-400 text-sm dark:text-gray-600">By signing up, you are creating a Flowbite account, and you agree to Flowbite's <a href="#" class="text-blue-400">Terms of Use</a> and <a href="#" class="text-blue-400">Privacy Policy</a>.</label>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="w-full p-2 bg-blue-500 rounded hover:bg-blue-800 focus:bg-blue-700 focus:outline-none text-white font-bold">Create an account</button>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm dark:text-gray-600">Already have an account? <a href="Login.html" class="text-blue-400">Sign in here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const appleDarkLogo = document.getElementById('apple-dark-logo');
+        const appleLightLogo = document.getElementById('apple-light-logo');
+
+        // Check the local storage for the theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            darkIcon.classList.remove('hidden');
+            appleDarkLogo.classList.remove('hidden');
+            appleLightLogo.classList.add('hidden');
+        } else {
+            lightIcon.classList.remove('hidden');
+            appleDarkLogo.classList.add('hidden');
+            appleLightLogo.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            // Toggle the theme
+            document.documentElement.classList.toggle('dark');
+
+            // Update the local storage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+                appleDarkLogo.classList.remove('hidden');
+                appleLightLogo.classList.add('hidden');
+            } else {
+                localStorage.setItem('theme', 'light');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+                appleDarkLogo.classList.add('hidden');
+                appleLightLogo.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
