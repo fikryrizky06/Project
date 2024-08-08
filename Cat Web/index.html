@@ -9,6 +9,38 @@
         html {
             scroll-behavior: smooth;
         }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-item {
+                margin-bottom: 0.5rem;
+            }
+            .main-title {
+                font-size: 2rem;
+            }
+            .care-tips-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .care-tips-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .cats-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .about-us-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .blogs {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -28,17 +60,19 @@
             clip-path: ellipse(70% 70% at 50% 50%);
         }
         body {
-            background-color: #F8F5F2; /* Beige background color */
+            background-color: #F8F695; /* Beige background color */
             overflow-x: hidden;
         }
         .nav-item {
-            font-family: 'Roboto', serif;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-        }
-        .nav-item:hover {
-            background: linear-gradient(to right, #FFB1B1 ,#7C00FE);
-        }
+        font-family: 'Roboto', serif;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
+    }
+    .nav-item:hover {
+        color: #8B4513; /* Brown color on hover */
+        background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+    }
         .nav-container {
             position: absolute;
             top: 20px;
@@ -64,7 +98,7 @@
             margin-right: 0.5rem;
         }
         .logo-text {
-            font-family: 'Georgia', serif;
+            font-family: 'Roboto', serif;
             font-size: 1.5rem;
             font-weight: bold;
             color: #1f2937;
@@ -96,145 +130,310 @@
             z-index: 0; /* Ensure it is under the navbar */
         }
         .care-tips-section {
-            background-color: #f8f5f2;
+            background-color: #F8F695;
             padding: 3rem 0; /* Increased padding */
             margin-top: 3rem; /* Increased margin top */
             text-align: center;
         }
         .care-tips-title {
             font-size: 2.5rem;
-            color: #597CFF;
-            font-family: 'Georgia', serif;
+            color: #5a2a07;
+            font-family: 'Roboto', serif;
             text-align: center;
             margin-bottom: 2rem;
         }
         .care-tips-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem; /* Increased gap */
+        }
+        .care-tips-row {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* Increased gap */
+        }
+        .care-tip {
+            text-align: center;
+            font-family: 'Roboto', serif;
+            max-width: 300px;
+            margin: 1rem; /* Added margin */
+            padding: 1.5rem; /* Increased padding */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for better visual */
+            border-radius: 0.5rem; /* Rounded corners */
+            background-color: #994509; /* White background for better contrast */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .care-tip:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+        .care-tip img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            margin-bottom: 1rem; /* Space between text and image */
+        }
+        .care-tip h3 {
+            font-size: 1.25rem;
+            color: #fff; /* Dark brown color */
+            margin-bottom: 0.5rem; /* Added margin bottom */
+        }
+        .care-tip p {
+            font-size: 1rem;
+            color: #FFF; /* Dark gray color */
+            margin-top: 0.5rem; /* Added margin top */
+        }
+        /* Our Cats Section */
+        .our-cats-section {
+            padding: 3rem 0; /* Increased padding */
+            text-align: center;
+            margin-top: 3rem; /* Increased margin top */
+        }
+        .our-cats-title {
+            font-size: 2.5rem;
+            color: #5a2a07;
+            font-family: 'Roboto', serif;
+            margin-bottom: 2rem;
+        }
+        .cats-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 3rem; /* Increased gap */
             margin-bottom: 2rem; /* Added margin bottom */
         }
-        .care-tip {
-            background-color: #fff;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 250px;
-            padding: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .cat {
+            text-align: center;
+            font-family: 'Roboto', serif;
+            width: 300px; /* Set a fixed width */
+            margin: 1rem; /* Added margin */
+            padding: 2rem; /* Increased padding */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for better visual */
+            border-radius: 0.5rem; /* Rounded corners */
+            background-color: #994509; /* Background color for better contrast */
+            display: flex; /* Added for Flexbox */
+            flex-direction: column; /* Align children vertically */
+            justify-content: space-between; /* Space between children */
         }
-        .care-tip:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-        .care-tip h3 {
-            font-size: 1.5rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-        .care-tip img {
+        .cat img {
             max-width: 100%;
             height: auto;
-            border-radius: 0.5rem;
+            border-radius: 1rem;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .cat img:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .cat-title {
+            font-size: 1.5rem; /* Larger font size for title */
             margin-top: 1rem;
+        }
+        .cat-description {
+            font-size: 1rem; /* Font size for description */
+            margin-top: 0.5rem; /* Margin top for description */
+        }
+        .cat-button {
+            font-size: 1rem;
+            color: #fff;
+            border: solid #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        .cat-button:hover {
+            background-color: #A0522D;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        /* About Us Section */
+        .about-us-section {
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        .about-us-title {
+            font-size: 2.5rem;
+            color: #5a2a07;
+            font-family: 'Roboto', serif;
+            margin-bottom: 2rem;
+            text-align: center; /* Center the title */
+        }
+        .about-us-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem; /* Add gap between images and text */
+        }
+        .about-us-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem; /* Space between images */
+        }
+        .about-us-images img {
+            width: 150px; /* Set a fixed width for images */
+            height: 150px; /* Set a fixed height for images */
+            object-fit: cover;
+            border-radius: 1rem; /* Rounded corners for images */
+        }
+        .about-us-text {
+            font-size: 1.25rem;
+            color: #1f2937; /* Dark gray color */
+            font-family: 'Calibri', sans-serif;
+            font-weight: bold;
+            max-width: 800px;
+        }
+
+        section.blogs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 3rem;
+        }
+        .blog {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .blog img {
+            border-radius: 50%;
+            width: 200px; /* Increased width */
+            height: 200px; /* Increased height */
+            object-fit: cover;
+            border: 5px solid #fff;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .blog img:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        .blog p {
+            font-size: 2rem; /* Increased font size */
+            color: black;
+            font-family: 'Roboto', serif;
+            margin: 0;
         }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="nav-container bg-gray-200 shadow-md">
-            <div class="logo-container">
-                <img src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Cat-512.png" alt="Logo" class="logo-img">
-                <div class="logo-text">All About Cats</div>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#main" class="nav-item">Home</a>
-                <a href="#care-tips" class="nav-item">Care Tips</a>
-                <a href="#our-cats" class="nav-item">Our Cats</a>
-                <a href="#about-us" class="nav-item">About Us</a>
-            </div>
-        </nav>
-    </header>
+<body class="flex flex-col min-h-screen scroll-smooth">
 
-    <main id="main" class="main-section">
-        <div class="container mx-auto px-4 py-12">
-            <h1 class="main-title mb-6">Welcome to All About Cats</h1>
-            <p class="mb-8 text-xl">Your go-to place for everything cat-related.</p>
-            <a href="#care-tips" class="main-button text-white py-3 px-6 rounded-full hover:bg-purple-600">Explore Care Tips</a>
+    <!-- Navigation Bar -->
+    <nav class="py-3 nav-container">
+        <div class="logo-container">
+            <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">    <!-- Replace with your logo image path -->
+            <span class="logo-text">PetKart</span>
+        </div>
+        <div class="container mx-auto flex justify-center space-x-10">
+            <a href="#" class="text-gray-800 nav-item font-bold">Home</a>
+            <a href="#care" class="text-gray-800 nav-item font-bold">Care</a>
+            <a href="#our-cats" class="text-gray-800 nav-item font-bold">Cats</a>
+            <a href="#about-us" class="text-gray-800 nav-item font-bold">About us</a>
+            <a href="#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
+        </div>
+    </nav> 
+    <!-- Main Section -->
+    <main class="main-section fade-in">
+        <div class="container mx-auto flex items-center justify-start"> <!-- Changed justify-center to justify-start -->
+            <div class="flex flex-col items-start text-white">
+                <h1 class="text-4xl mb-6 main-title">All about cats!</h1>
+                <button class="bg-blue-500 text-white py-2 px-6 rounded-lg font-bold main-button">Start reading</button>
+            </div>
         </div>
     </main>
-
-    <section id="care-tips" class="care-tips-section">
+    <!-- Care Tips Section -->
+    <section id="care" class="care-tips-section">
         <h2 class="care-tips-title">Cat Care Tips</h2>
         <div class="care-tips-container">
-            <div class="care-tip fade-in hover-bounce">
-                <h3>Tip 1: Nutrition</h3>
-                <p>Ensure your cat has a balanced diet. Consult your vet for the best food options.</p>
-                <img src="https://via.placeholder.com/150" alt="Nutrition">
+            <div class="care-tips-row">
+                <div class="care-tip">
+                    <img src="https://i.pinimg.com/236x/3a/c8/b9/3ac8b935aa9b2a72bfb63dedeb6bfb75.jpg" alt="Grooming">
+                    <h3>1. Keep kittens warm</h3>
+                    <p>Ensure your kittens are always in a warm and cozy environment to keep them healthy and comfortable.</p>
+                </div>
+                <div class="care-tip">
+                    <img src="https://i.pinimg.com/736x/52/70/4b/52704b2c0916ece3d5318660997fed46.jpg" alt="Nutrition">
+                    <h3>2. Provide kittens with adequate hydration and nutrition.</h3>
+                    <p>Feed your kittens with the right balance of nutrients and ensure they are always hydrated.</p>
+                </div>
+                <div class="care-tip">
+                    <img src="https://i.pinimg.com/564x/ec/e3/55/ece35591056177c337c06a25b966d206.jpg" alt="Hydration">
+                    <h3>3. Keep kittens clean.</h3>
+                    <p>Regular cleaning is essential to prevent infections and keep your kittens healthy.</p>
+                </div>
             </div>
-            <div class="care-tip fade-in hover-bounce">
-                <h3>Tip 2: Hydration</h3>
-                <p>Provide fresh water daily. Consider a cat water fountain to encourage drinking.</p>
-                <img src="https://via.placeholder.com/150" alt="Hydration">
-            </div>
-            <div class="care-tip fade-in hover-bounce">
-                <h3>Tip 3: Grooming</h3>
-                <p>Regularly brush your cat's fur to prevent matting and hairballs.</p>
-                <img src="https://via.placeholder.com/150" alt="Grooming">
-            </div>
-            <div class="care-tip fade-in hover-bounce">
-                <h3>Tip 4: Veterinary Care</h3>
-                <p>Schedule regular vet check-ups to keep your cat healthy and vaccinated.</p>
-                <img src="https://via.placeholder.com/150" alt="Veterinary Care">
+            <div class="care-tips-row">
+                <div class="care-tip">
+                    <img src="https://i.pinimg.com/236x/21/a2/02/21a202e5700f7381eb5e9886e320fd5b.jpg" alt="Veterinary Care">
+                    <h3>4. Provide socialization.</h3>
+                    <p>Socialize your kittens with other pets and humans to ensure they grow up to be friendly and well-adjusted.</p>
+                </div>
+                <div class="care-tip">
+                    <img src="./img/5.png" alt="Play and Exercise">
+                    <h3>5. Protect from disease.</h3>
+                    <p>Regular vet visits and vaccinations are crucial to protect your kittens from various diseases.</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="our-cats" class="our-cats-section">
-        <h2 class="our-cats-title">Meet Our Cats</h2>
+    <!-- Our Cats Section -->
+    <section id="our-cats" class="our-cats-section fade-in">
+        <h2 class="our-cats-title font-bold">OUR CATS</h2>
         <div class="cats-container">
-            <div class="cat">
-                <img src="https://via.placeholder.com/300" alt="Cat 1">
-                <h3 class="cat-title">Whiskers</h3>
-                <p class="cat-description">A playful and curious cat who loves to explore.</p>
+            <div class="cat text-white">
+                <img src="img/kcng.jpg" alt="Cat 1">
+                <h3 class="cat-title">Cat 1</h3>
+                <p class="cat-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus.</p>
                 <a href="#" class="cat-button">Read More</a>
             </div>
-            <div class="cat">
-                <img src="https://via.placeholder.com/300" alt="Cat 2">
-                <h3 class="cat-title">Fluffy</h3>
-                <p class="cat-description">A gentle giant with a love for napping in the sun.</p>
+            <div class="cat text-white">
+                <img src="./img/cat2.jpg" alt="Cat 2">
+                <h3 class="cat-title">Cat 2</h3>
+                <p class="cat-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque?</p>
                 <a href="#" class="cat-button">Read More</a>
-            </div>
-            <div class="cat">
-                <img src="https://via.placeholder.com/300" alt="Cat 3">
-                <h3 class="cat-title">Shadow</h3>
-                <p class="cat-description">A stealthy and mysterious cat with a sleek coat.</p>
-                <a href="#" class="cat-button">Read More</a>
-            </div>
-            <div class="cat">
-                <img src="https://via.placeholder.com/300" alt="Cat 4">
-                <h3 class="cat-title">Luna</h3>
-                <p class="cat-description">A mischievous and energetic kitten who loves to play.</p>
+            </div>z
+            <div class="cat text-white">
+                <img src="./img/cat3.jpg" alt="Cat 3">
+                <h3 class="cat-title">Cat 3</h3>
+                <p class="cat-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus!</p>
                 <a href="#" class="cat-button">Read More</a>
             </div>
         </div>
     </section>
-
-    <section id="about-us" class="about-us-section">
-        <h2 class="about-us-title">About Us</h2>
-        <div class="about-us-content">
-            <img src="https://via.placeholder.com/150" alt="About Us Image 1">
-            <img src="https://via.placeholder.com/150" alt="About Us Image 2">
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us-section fade-in">
+        <h2 class="about-us-title font-bold">ABOUT US</h2>
+            <div class="about-us-content">
+                <div class="about-us-images">
+                    <img src="img/cat1.jpg" alt="About Us Image 1">
+                    <img src="img/cat2.jpg" alt="About Us Image 2">
+                    <img src="img/cat3.jpg" alt="About Us Image 3">
+                    <img src="img/kcng.jpg" alt="About Us Image 4">
+                </div>
             <div class="about-us-text">
-                We are a team of cat enthusiasts dedicated to providing valuable information and resources about cat care. Our mission is to help cat owners understand their feline friends better and ensure they live healthy, happy lives.
+                <p>The cat, commonly referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. <br>
+                Recent advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.</p>
             </div>
-            <img src="https://via.placeholder.com/150" alt="About Us Image 3">
-            <img src="https://via.placeholder.com/150" alt="About Us Image 4">
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 All About Cats. All rights reserved.</p>
-    </footer>
+    <!-- Blogs Section -->
+    <section id="blog" class="blogs fade-in">
+        <div class="blog">
+            <img src="img/cat1.jpg" alt="Blog 1">
+            <p>Blog 1</p>
+        </div>
+        <div class="blog">
+            <img src="img/cat2.jpg" alt="Blog 2">
+            <p>Blog 2</p>
+        </div>
+        <div class="blog">
+            <img src="img/cat3.jpg" alt="Blog 3">
+            <p>Blog 3</p>
+        </div>
+        <div class="blog">
+            <img src="img/kcng.jpg" alt="Blog 4">
+            <p>Blog 4</p>
+        </div>
+    </section>
 </body>
 </html>
